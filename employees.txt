@@ -1,4 +1,3 @@
-Alex Korp,Junior,3000
-Nikita Borisenko,Senior,5000
-Sitarama Raju,Middle,4000
-Ivanenko Olga,Senior,5500
+Alex Korp,3000
+Nikita Borisenko,2000
+Sitarama Raju,1000

@@ -1,12 +1,12 @@
-import time
+
 
 print('Hello')
-time.sleep(2)
+
 print('How can i help you')
 
 def add_contact():
     while True:
-        time.sleep(2)
+        
         user_ask1 = input('введіть add якщо ви хочете додати ім\'я і номер телефону: ')
         if user_ask1.lower() == 'add':
 
@@ -14,13 +14,11 @@ def add_contact():
             global add_number
 
 
-            time.sleep(2)
+            
             add_name = input('введіть ім\'я: ')
             add_number = input('Введіть номер телефону який ви хочете додати: ')
-            time.sleep(1)
+            
             return 'Зберігаю інформацію...'
-            time.sleep(3)
-
 
             global name_number_dict
             name_number_dict = {add_name: add_number} 
@@ -41,17 +39,17 @@ def add_contact():
 def change_contact():
     user_ask1 = input('Чи бажаєте ви змінити конткакт так/ні: ')
     if user_ask1.lower() == 'так':
-        time.sleep(1)
+        
         add_name = input('Введіть на яке ім\'я ви бажаєте змінити: ')
         add_number = input('Введіть номер телефону на який ви бажаєте змінити: ')
-        time.sleep(1)
+        
         return 'виконую зміну'
         name_number_dict.pop(add_name)
 
         name_number_dict[add_name] = add_number
         return name_number_dict
 
-        time.sleep(3)
+        
         return 'змінну успішно збережено!'
 
 add_contact()

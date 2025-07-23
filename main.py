@@ -1,3 +1,7 @@
+print('Hello')
+
+print('How can i help you')
+
 print(input('Hello: '))
 
 

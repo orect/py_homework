@@ -3,7 +3,7 @@ def get_cats_info(path):
     with open(path, 'r') as file:
         for line in file:
             aidi, name, age = line.strip().split(',') 
-            cats_dict = {'aidi': aidi, 'name': name, 'age': age}
+            cats_dict = {'id': id, 'name': name, 'age': age}
             cats_info.append(cats_dict)
     return cats_info
     

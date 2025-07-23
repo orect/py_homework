@@ -1,9 +1,4 @@
 
-
-print('Hello')
-
-print('How can i help you')
-
 def add_contact():
     while True:
         

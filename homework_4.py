@@ -18,24 +18,24 @@ def add_contact():
             add_name = input('введіть ім\'я: ')
             add_number = input('Введіть номер телефону який ви хочете додати: ')
             time.sleep(1)
-            print('Зберігаю інформацію...')
+            return 'Зберігаю інформацію...'
             time.sleep(3)
 
 
             global name_number_dict
             name_number_dict = {add_name: add_number} 
-            print(name_number_dict)
+            return name_number_dict
 
             user_ask2 = input('Чи хочете ви ще ввести? Так/ні:  ')
             if user_ask2.lower() == 'так':
                 pass
             
             else:
-                print('Ця інформація збережена!')
+                return 'Ця інформація збережена!'
                 break
 
         else:
-            print('ви вводете не те що вас просять :(')
+            return 'ви вводете не те що вас просять :('
     
 
 def change_contact():
@@ -45,14 +45,14 @@ def change_contact():
         add_name = input('Введіть на яке ім\'я ви бажаєте змінити: ')
         add_number = input('Введіть номер телефону на який ви бажаєте змінити: ')
         time.sleep(1)
-        print('виконую зміну')
+        return 'виконую зміну'
         name_number_dict.pop(add_name)
 
         name_number_dict[add_name] = add_number
-        print(name_number_dict)
+        return name_number_dict
 
         time.sleep(3)
-        print('змінну успішно збережено!')
+        return 'змінну успішно збережено!'
 
 add_contact()
 change_contact()
@@ -62,7 +62,7 @@ def show_phone():
         ask = input('щоб дізнатись телефон напишіть ім\'я користувача номером: ')
         
         if ask == add_name:
-            print(add_number)
+            return add_number
         else:
             break
 
@@ -72,7 +72,7 @@ def all():
     ask = input("якщо ви хочете дізнатись всі ім'я і номера в записній книжці напишіть так/ні: ")
     while True:
         if ask == 'так':
-            print(name_number_dict)
+            return name_number_dict
         
         else:
             break
@@ -86,6 +86,6 @@ def close_exit():
             if ask2 == 'exit':
                 break
         else:
-            print("программа почнеться заново")
+            return "программа почнеться заново"
 
 close_exit()
